@@ -1,14 +1,14 @@
 class BattingConsistencyService:
 
     def __init__(self):
-        # 🔒 Pre-stored values
+      
         self.p = 100   # mean runs
         self.q =  0 # standard deviation
         self.r = 0   # failure rate
 
     def calculate_bci(self):
 
-        # 🛡️ Safety check
+       
         if self.p == 0:
             bci = 0
         else:
@@ -18,7 +18,7 @@ class BattingConsistencyService:
 
             bci = stability * reliability * 100
 
-        # 🏷️ Consistency Label
+      
         if bci >= 70:
             label = "Highly Consistent"
         elif bci >= 50:
